@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <nav class="menu container">
+        <a class="logo" href="index.html">Meu Portfólio</a>
+
+        <button
+          class="menu-botao"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="menu-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a class="ativo" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="pagina-interna">
+      <section class="container">
+        <div class="titulo-secao">
+          <p class="etiqueta">Contato</p>
+          <h1>Vamos conversar?</h1>
+          <p>
+            Esta página reúne meus principais canais de contato para
+            oportunidades, networking e projetos acadêmicos.
+          </p>
+        </div>
+
+        <div class="conteudo-duas-colunas">
+          <section class="card texto-card">
+            <h2>Informações</h2>
+            <p><strong>Email:</strong> seuemail@exemplo.com</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/seu-perfil</p>
+            <p>
+              Substitua os dados acima pelos seus contatos reais antes de
+              publicar no GitHub Pages.
+            </p>
+          </section>
+
+          <section class="card texto-card">
+            <h2>Mensagem</h2>
+            <form class="formulario" novalidate>
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu email"
+              />
+
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                placeholder="Escreva sua mensagem"
+              ></textarea>
+
+              <p class="form-aviso" aria-live="polite"></p>
+              <button class="botao primario" type="submit">
+                Validar mensagem
+              </button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <button class="voltar-topo" type="button" aria-label="Voltar ao topo">
+      ↑
+    </button>
+
+    <footer class="rodape">
+      <p>© 2026 - Portfólio acadêmico desenvolvido para GitHub Pages.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
