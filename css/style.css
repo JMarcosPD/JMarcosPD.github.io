@@ -293,6 +293,7 @@ ul {
   box-shadow:
     0 0 42px rgba(15, 118, 110, 0.24),
     var(--sombra);
+  overflow: hidden;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -310,6 +311,9 @@ ul {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 50% 28%;
+  transform: scale(1.14);
+  transform-origin: center 28%;
 }
 
 .mini-card,
