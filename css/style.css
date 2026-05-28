@@ -113,21 +113,13 @@ ul {
 }
 
 .menu-links a img {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
-}
-
-.nav-badge {
-  display: inline-grid;
-  width: 20px;
-  height: 20px;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(15, 118, 110, 0.12);
-  color: var(--cor-primaria);
-  font-size: 0.72rem;
-  font-weight: 900;
+  flex: 0 0 auto;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
 
 .menu-links a:hover,
@@ -135,6 +127,12 @@ ul {
   background: rgba(15, 118, 110, 0.1);
   color: var(--cor-primaria-escura);
   transform: translateY(-1px);
+}
+
+.menu-links a:hover img,
+.menu-links a.ativo img {
+  filter: saturate(1.12) contrast(1.05);
+  transform: scale(1.08);
 }
 
 .menu-botao {
