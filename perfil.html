@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil | Portfólio</title>
+    <title>Perfil | João Marcos</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="topo">
-      <nav class="menu container">
-        <a class="logo" href="index.html">Meu Portfólio</a>
+      <nav class="menu container" aria-label="Navegação principal">
+        <a class="logo" href="index.html">JMarcos<span>PD</span></a>
 
         <button
           class="menu-botao"
@@ -17,21 +17,38 @@
           aria-label="Abrir menu"
           aria-expanded="false"
         >
-          ☰
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <ul class="menu-links">
-          <li><a href="index.html">Início</a></li>
-          <li><a class="ativo" href="perfil.html">Perfil</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li>
+            <a href="index.html">
+              <img src="images/inicio.png" alt="" aria-hidden="true" />
+              Início
+            </a>
+          </li>
+          <li><a class="ativo" href="perfil.html"><span class="nav-badge">P</span>Perfil</a></li>
+          <li>
+            <a href="projetos.html">
+              <img src="images/Projetos.png" alt="" aria-hidden="true" />
+              Projetos
+            </a>
+          </li>
+          <li>
+            <a href="contato.html">
+              <img src="images/Contato.png" alt="" aria-hidden="true" />
+              Contato
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main class="pagina-interna">
       <section class="container">
-        <div class="titulo-secao">
+        <div class="titulo-secao reveal">
           <p class="etiqueta">Perfil do desenvolvedor</p>
           <h1>Sobre mim</h1>
           <p>
@@ -42,7 +59,7 @@
         </div>
 
         <div class="conteudo-duas-colunas">
-          <article class="card texto-card">
+          <article class="card texto-card reveal">
             <h2>Formação e tecnologia</h2>
             <p>
               Tenho experiência prática com C, Java e desenvolvimento web,
@@ -51,12 +68,12 @@
             </p>
             <p>
               No desenvolvimento web, busco criar interfaces organizadas,
-              funcionais e com foco em usabilidade, sempre respeitando o nível e
-              os objetivos de cada projeto.
+              funcionais e com foco em usabilidade, sempre respeitando o nível
+              e os objetivos de cada projeto.
             </p>
           </article>
 
-          <article class="card texto-card">
+          <article class="card texto-card reveal">
             <h2>Processos e melhoria contínua</h2>
             <p>
               Além da área de tecnologia, também tenho contato com gestão e
@@ -71,9 +88,10 @@
         </div>
 
         <section class="secao-menor">
-          <div class="card destaque-horizontal">
+          <div class="card destaque-horizontal reveal">
             <div>
-              <h2>Diferencial</h2>
+              <p class="etiqueta">Diferencial</p>
+              <h2>Visão técnica conectada a processos</h2>
               <p>
                 Minha vivência com SIPOC, BPMN e análise de processos fortalece
                 minha capacidade de entender sistemas de forma integrada,
@@ -92,7 +110,7 @@
     </button>
 
     <footer class="rodape">
-      <p>© 2026 - Portfólio acadêmico desenvolvido para GitHub Pages.</p>
+      <p>© 2026 - Portfólio de João Marcos para GitHub Pages.</p>
     </footer>
 
     <script src="js/script.js"></script>

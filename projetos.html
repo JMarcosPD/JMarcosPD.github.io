@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projetos | Portfólio</title>
+    <title>Projetos | João Marcos</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="topo">
-      <nav class="menu container">
-        <a class="logo" href="index.html">Meu Portfólio</a>
+      <nav class="menu container" aria-label="Navegação principal">
+        <a class="logo" href="index.html">JMarcos<span>PD</span></a>
 
         <button
           class="menu-botao"
@@ -17,32 +17,48 @@
           aria-label="Abrir menu"
           aria-expanded="false"
         >
-          ☰
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <ul class="menu-links">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="perfil.html">Perfil</a></li>
-          <li><a class="ativo" href="projetos.html">Projetos</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li>
+            <a href="index.html">
+              <img src="images/inicio.png" alt="" aria-hidden="true" />
+              Início
+            </a>
+          </li>
+          <li><a href="perfil.html"><span class="nav-badge">P</span>Perfil</a></li>
+          <li>
+            <a class="ativo" href="projetos.html">
+              <img src="images/Projetos.png" alt="" aria-hidden="true" />
+              Projetos
+            </a>
+          </li>
+          <li>
+            <a href="contato.html">
+              <img src="images/Contato.png" alt="" aria-hidden="true" />
+              Contato
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main class="pagina-interna">
       <section class="container">
-        <div class="titulo-secao">
+        <div class="titulo-secao reveal">
           <p class="etiqueta">Projetos acadêmicos e práticos</p>
           <h1>Meus projetos</h1>
           <p>
-            Alguns exemplos de projetos desenvolvidos durante a formação, com
-            foco em aprendizado, organização e aplicação prática dos conceitos
-            estudados.
+            Projetos desenvolvidos durante a formação, com foco em aprendizado,
+            organização e aplicação prática dos conceitos estudados.
           </p>
         </div>
 
         <div class="grade projetos-grade">
-          <article class="card projeto-card">
+          <article class="card projeto-card reveal">
             <span class="tag">Linguagem C</span>
             <h2>Sistema com estruturas dinâmicas</h2>
             <p>
@@ -56,7 +72,7 @@
             </ul>
           </article>
 
-          <article class="card projeto-card">
+          <article class="card projeto-card reveal">
             <span class="tag">Java</span>
             <h2>Aplicação orientada a objetos</h2>
             <p>
@@ -70,7 +86,7 @@
             </ul>
           </article>
 
-          <article class="card projeto-card">
+          <article class="card projeto-card reveal">
             <span class="tag">Web</span>
             <h2>Interface com HTML, CSS e JavaScript</h2>
             <p>
@@ -84,7 +100,7 @@
             </ul>
           </article>
 
-          <article class="card projeto-card">
+          <article class="card projeto-card reveal">
             <span class="tag">TCC / Processos</span>
             <h2>Aplicação do ciclo PDCA</h2>
             <p>
@@ -99,6 +115,25 @@
             </ul>
           </article>
         </div>
+
+        <div class="github-cta reveal">
+          <div>
+            <p class="etiqueta">Repositórios</p>
+            <h2>Acompanhe minha evolução no GitHub</h2>
+            <p>
+              Novos estudos e projetos são organizados por lá conforme avanço
+              na minha formação.
+            </p>
+          </div>
+          <a
+            class="botao primario"
+            href="https://github.com/JMarcosPD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir GitHub
+          </a>
+        </div>
       </section>
     </main>
 
@@ -107,7 +142,7 @@
     </button>
 
     <footer class="rodape">
-      <p>© 2026 - Portfólio acadêmico desenvolvido para GitHub Pages.</p>
+      <p>© 2026 - Portfólio de João Marcos para GitHub Pages.</p>
     </footer>
 
     <script src="js/script.js"></script>

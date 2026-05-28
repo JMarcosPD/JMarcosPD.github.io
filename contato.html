@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato | Portfólio</title>
+    <title>Contato | João Marcos</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="topo">
-      <nav class="menu container">
-        <a class="logo" href="index.html">Meu Portfólio</a>
+      <nav class="menu container" aria-label="Navegação principal">
+        <a class="logo" href="index.html">JMarcos<span>PD</span></a>
 
         <button
           class="menu-botao"
@@ -17,42 +17,50 @@
           aria-label="Abrir menu"
           aria-expanded="false"
         >
-          ☰
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <ul class="menu-links">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="perfil.html">Perfil</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a class="ativo" href="contato.html">Contato</a></li>
+          <li>
+            <a href="index.html">
+              <img src="images/inicio.png" alt="" aria-hidden="true" />
+              Início
+            </a>
+          </li>
+          <li><a href="perfil.html"><span class="nav-badge">P</span>Perfil</a></li>
+          <li>
+            <a href="projetos.html">
+              <img src="images/Projetos.png" alt="" aria-hidden="true" />
+              Projetos
+            </a>
+          </li>
+          <li>
+            <a class="ativo" href="contato.html">
+              <img src="images/Contato.png" alt="" aria-hidden="true" />
+              Contato
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main class="pagina-interna">
       <section class="container">
-        <div class="titulo-secao">
+        <div class="titulo-secao reveal">
           <p class="etiqueta">Contato</p>
           <h1>Vamos conversar?</h1>
           <p>
-            Esta página reúne meus principais canais de contato para
-            oportunidades, networking e projetos acadêmicos.
+            Envie uma mensagem direta pelo WhatsApp ou acesse meus perfis
+            profissionais para acompanhar minha evolução.
           </p>
         </div>
 
-        <div class="conteudo-duas-colunas">
-          <section class="card texto-card">
-            <h2>Informações</h2>
-            <p><strong>Email:</strong> seuemail@exemplo.com</p>
-            <p><strong>LinkedIn:</strong> linkedin.com/in/seu-perfil</p>
-            <p>
-              Substitua os dados acima pelos seus contatos reais antes de
-              publicar no GitHub Pages.
-            </p>
-          </section>
-
-          <section class="card texto-card">
-            <h2>Mensagem</h2>
+        <div class="contato-layout">
+          <section class="card contato-card reveal">
+            <p class="etiqueta">Mensagem rápida</p>
+            <h2>Enviar pelo WhatsApp</h2>
             <form class="formulario" novalidate>
               <label for="nome">Nome</label>
               <input
@@ -60,30 +68,64 @@
                 id="nome"
                 name="nome"
                 placeholder="Digite seu nome"
-              />
-
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite seu email"
+                autocomplete="name"
               />
 
               <label for="mensagem">Mensagem</label>
               <textarea
                 id="mensagem"
                 name="mensagem"
-                rows="5"
+                rows="6"
                 placeholder="Escreva sua mensagem"
               ></textarea>
 
               <p class="form-aviso" aria-live="polite"></p>
               <button class="botao primario" type="submit">
-                Validar mensagem
+                Enviar mensagem
               </button>
             </form>
           </section>
+
+          <aside class="card redes-card reveal">
+            <p class="etiqueta">Redes sociais</p>
+            <h2>Conecte-se comigo</h2>
+            <p>
+              Também estou disponível para networking, oportunidades e troca de
+              experiências em tecnologia.
+            </p>
+
+            <div class="redes-lista">
+              <a
+                class="social-link"
+                href="https://github.com/JMarcosPD"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="social-icon">GH</span>
+                <span>
+                  <strong>GitHub</strong>
+                  <small>github.com/JMarcosPD</small>
+                </span>
+              </a>
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/jmarcospd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="social-icon">in</span>
+                <span>
+                  <strong>LinkedIn</strong>
+                  <small>linkedin.com/in/jmarcospd</small>
+                </span>
+              </a>
+            </div>
+
+            <div class="whatsapp-info">
+              <strong>WhatsApp</strong>
+              <span>+55 43 99635-7911</span>
+            </div>
+          </aside>
         </div>
       </section>
     </main>
@@ -93,7 +135,7 @@
     </button>
 
     <footer class="rodape">
-      <p>© 2026 - Portfólio acadêmico desenvolvido para GitHub Pages.</p>
+      <p>© 2026 - Portfólio de João Marcos para GitHub Pages.</p>
     </footer>
 
     <script src="js/script.js"></script>

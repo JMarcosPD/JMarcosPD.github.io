@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Estudante de ADS</title>
+    <title>Portfólio | João Marcos</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="topo">
-      <nav class="menu container">
-        <a class="logo" href="index.html">Meu Portfólio</a>
+      <nav class="menu container" aria-label="Navegação principal">
+        <a class="logo" href="index.html">JMarcos<span>PD</span></a>
 
         <button
           class="menu-botao"
@@ -17,14 +17,31 @@
           aria-label="Abrir menu"
           aria-expanded="false"
         >
-        
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <ul class="menu-links">
-          <li><a class="ativo" href="index.html">Início</a></li>
-          <li><a href="perfil.html">Perfil</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li>
+            <a class="ativo" href="index.html">
+              <img src="images/inicio.png" alt="" aria-hidden="true" />
+              Início
+            </a>
+          </li>
+          <li><a href="perfil.html"><span class="nav-badge">P</span>Perfil</a></li>
+          <li>
+            <a href="projetos.html">
+              <img src="images/Projetos.png" alt="" aria-hidden="true" />
+              Projetos
+            </a>
+          </li>
+          <li>
+            <a href="contato.html">
+              <img src="images/Contato.png" alt="" aria-hidden="true" />
+              Contato
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -32,60 +49,94 @@
     <main>
       <section class="hero">
         <div class="container hero-conteudo">
-          <div>
-            <p class="etiqueta">
-              Estudante de Análise e Desenvolvimento de Sistemas
-            </p>
-            <h1>Olá, eu sou um futuro desenvolvedor em formação.</h1>
+          <div class="hero-texto reveal">
+            <p class="etiqueta">Estudante de ADS • Desenvolvedor em formação</p>
+            <h1>Construindo soluções web com clareza, lógica e tecnologia.</h1>
             <p>
-              Este portfólio apresenta minha trajetória acadêmica, meus projetos
-              e minhas principais habilidades em tecnologia, desenvolvimento web
-              e melhoria de processos.
+              Sou João Marcos, estudante de Análise e Desenvolvimento de
+              Sistemas. Este portfólio reúne minha evolução em desenvolvimento,
+              projetos acadêmicos e habilidades com programação e ferramentas
+              digitais.
             </p>
             <div class="acoes">
               <a class="botao primario" href="projetos.html">Ver projetos</a>
-              <a class="botao secundario" href="perfil.html">Conhecer perfil</a>
+              <a class="botao secundario" href="contato.html">Falar comigo</a>
             </div>
           </div>
 
-          <aside class="resumo-card">
-            <h2>Áreas de interesse</h2>
-            <ul>
-              <li>Desenvolvimento de sistemas</li>
-              <li>Aplicações web</li>
-              <li>Orientação a objetos</li>
-              <li>Melhoria contínua de processos</li>
-            </ul>
-          </aside>
+          <div class="hero-visual reveal">
+            <div class="foto-moldura">
+              <img
+                class="foto-perfil"
+                src="images/perfil.png"
+                alt="Foto de perfil de João Marcos"
+              />
+            </div>
+            <div class="mini-card">
+              <strong>Clean tech portfolio</strong>
+              <span>HTML • CSS • JavaScript • Java • C</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="secao container">
-        <div class="titulo-secao">
-          <p class="etiqueta">Competências</p>
-          <h2>Conhecimentos em desenvolvimento e organização</h2>
+        <div class="titulo-secao reveal">
+          <p class="etiqueta">Tecnologias e Ferramentas</p>
+          <h2>Stack em evolução para criar interfaces e sistemas melhores</h2>
+          <p>
+            Conhecimentos que venho praticando em projetos acadêmicos,
+            estudos e organização de soluções digitais.
+          </p>
         </div>
 
-        <div class="grade cards-pequenos">
-          <article class="card">
-            <h3>Linguagens</h3>
-            <p>
-              C, Java, HTML, CSS e JavaScript básico para interfaces simples.
-            </p>
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <img src="images/C.png" alt="Ícone da linguagem C" />
+            <h3>C</h3>
           </article>
+          <article class="tech-card reveal">
+            <img src="images/c++.png" alt="Ícone da linguagem C++" />
+            <h3>C++</h3>
+          </article>
+          <article class="tech-card reveal">
+            <img src="images/java.png" alt="Ícone da linguagem Java" />
+            <h3>Java</h3>
+          </article>
+          <article class="tech-card reveal">
+            <img src="images/HTML.png" alt="Ícone de HTML" />
+            <h3>HTML</h3>
+          </article>
+          <article class="tech-card reveal">
+            <img src="images/css.png" alt="Ícone de CSS" />
+            <h3>CSS</h3>
+          </article>
+          <article class="tech-card reveal">
+            <img src="images/JS.png" alt="Ícone de JavaScript" />
+            <h3>JavaScript</h3>
+          </article>
+          <article class="tech-card reveal">
+            <img src="images/excel.png" alt="Ícone do Excel" />
+            <h3>Excel</h3>
+          </article>
+          <article class="tech-card tech-card-texto reveal">
+            <span>VS</span>
+            <h3>VS Code</h3>
+          </article>
+        </div>
+      </section>
 
-          <article class="card">
-            <h3>Conceitos</h3>
+      <section class="secao secao-destaque">
+        <div class="container destaque-horizontal reveal">
+          <div>
+            <p class="etiqueta">Projetos e aprendizado</p>
+            <h2>Do raciocínio lógico à interface responsiva</h2>
             <p>
-              Lógica de programação, estruturas de dados, documentação e boas
-              práticas.
+              Meus projetos conectam fundamentos de programação, orientação a
+              objetos, desenvolvimento web e melhoria contínua de processos.
             </p>
-          </article>
-
-          <article class="card">
-            <h3>Processos</h3>
-            <p>Mapeamento, análise de processos, SIPOC, BPMN e ciclo PDCA.</p>
-          </article>
+          </div>
+          <a class="botao primario" href="projetos.html">Explorar projetos</a>
         </div>
       </section>
     </main>
@@ -95,7 +146,7 @@
     </button>
 
     <footer class="rodape">
-      <p>© 2026 - Portfólio acadêmico desenvolvido para GitHub Pages.</p>
+      <p>© 2026 - Portfólio de João Marcos para GitHub Pages.</p>
     </footer>
 
     <script src="js/script.js"></script>
