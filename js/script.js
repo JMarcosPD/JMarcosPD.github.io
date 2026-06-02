@@ -1,34 +1,31 @@
-const botaoMenu = document.querySelector(".menu-botao");
-const linksMenu = document.querySelector(".menu-links");
-const botaoTopo = document.querySelector(".voltar-topo");
-const formulario = document.querySelector(".formulario");
-const itensAnimados = document.querySelectorAll(".reveal");
+const backToTopButton = document.querySelector(".back-to-top");
+const contactForm = document.querySelector(".contact-form");
+const revealItems = document.querySelectorAll(".reveal");
+const navbarCollapse = document.querySelector(".navbar-collapse");
 
-if (botaoMenu && linksMenu) {
-  botaoMenu.addEventListener("click", function () {
-    const menuAberto = linksMenu.classList.toggle("aberto");
-    botaoMenu.setAttribute("aria-expanded", String(menuAberto));
-    document.body.classList.toggle("menu-aberto", menuAberto);
+if (navbarCollapse && window.bootstrap) {
+  const collapse = new bootstrap.Collapse(navbarCollapse, {
+    toggle: false,
   });
 
-  linksMenu.addEventListener("click", function (evento) {
-    if (evento.target.closest("a")) {
-      linksMenu.classList.remove("aberto");
-      botaoMenu.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("menu-aberto");
-    }
+  navbarCollapse.querySelectorAll(".nav-link").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (navbarCollapse.classList.contains("show")) {
+        collapse.hide();
+      }
+    });
   });
 }
 
-if (botaoTopo) {
-  const alternarBotaoTopo = function () {
-    botaoTopo.classList.toggle("aparecer", window.scrollY > 250);
+if (backToTopButton) {
+  const toggleBackToTop = function () {
+    backToTopButton.classList.toggle("is-visible", window.scrollY > 320);
   };
 
-  window.addEventListener("scroll", alternarBotaoTopo);
-  alternarBotaoTopo();
+  window.addEventListener("scroll", toggleBackToTop);
+  toggleBackToTop();
 
-  botaoTopo.addEventListener("click", function () {
+  backToTopButton.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -36,53 +33,55 @@ if (botaoTopo) {
   });
 }
 
-if (formulario) {
-  formulario.addEventListener("submit", function (evento) {
-    evento.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    const nome = document.querySelector("#nome").value.trim();
-    const mensagem = document.querySelector("#mensagem").value.trim();
-    const aviso = document.querySelector(".form-aviso");
+    const nameInput = contactForm.querySelector("#nome");
+    const messageInput = contactForm.querySelector("#mensagem");
+    const feedback = contactForm.querySelector(".form-feedback");
+    const name = nameInput.value.trim();
+    const message = messageInput.value.trim();
 
-    aviso.classList.remove("erro", "sucesso");
+    feedback.classList.remove("error", "success");
 
-    if (nome === "" || mensagem === "") {
-      aviso.textContent = "Preencha seu nome e a mensagem antes de enviar.";
-      aviso.classList.add("erro");
+    if (!name || !message) {
+      feedback.textContent = "Preencha seu nome e a mensagem antes de enviar.";
+      feedback.classList.add("error");
       return;
     }
 
-    const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
-    const url = `https://wa.me/5543996357911?text=${encodeURIComponent(texto)}`;
+    const text = `Olá, meu nome é ${name}. ${message}`;
+    const url = `https://wa.me/5543996357911?text=${encodeURIComponent(text)}`;
 
-    aviso.textContent = "Abrindo WhatsApp com sua mensagem...";
-    aviso.classList.add("sucesso");
+    feedback.textContent = "Abrindo WhatsApp com sua mensagem...";
+    feedback.classList.add("success");
     window.open(url, "_blank", "noopener,noreferrer");
   });
 }
 
-if (itensAnimados.length > 0) {
+if (revealItems.length > 0) {
   if ("IntersectionObserver" in window) {
-    const observador = new IntersectionObserver(
-      function (entradas) {
-        entradas.forEach(function (entrada) {
-          if (entrada.isIntersecting) {
-            entrada.target.classList.add("visivel");
-            observador.unobserve(entrada.target);
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.14,
+        threshold: 0.16,
       },
     );
 
-    itensAnimados.forEach(function (item) {
-      observador.observe(item);
+    revealItems.forEach(function (item) {
+      observer.observe(item);
     });
   } else {
-    itensAnimados.forEach(function (item) {
-      item.classList.add("visivel");
+    revealItems.forEach(function (item) {
+      item.classList.add("is-visible");
     });
   }
 }
