@@ -70,6 +70,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   width: 120px;
   height: 120px;
   object-fit: cover;
+  object-position: center 15%;
   border: 6px solid rgba(255, 255, 255, 0.14);
   transition: var(--transition);
 }
@@ -382,7 +383,8 @@ ul { padding: 0; margin: 0; list-style: none; }
   border-radius: 8px;
   box-shadow: var(--shadow-md);
   object-fit: cover;
-  max-height: 420px;
+  object-position: center 12%;
+  height: 420px;
   width: 100%;
 }
 
@@ -497,17 +499,17 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .skills .progress-bar-wrap {
-  background: rgba(232, 117, 50, 0.12);
+  background: rgba(232, 117, 50, 0.15);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .skills .progress-bar {
-  width: 1px;
-  height: 10px;
+  width: 0%;
+  height: 12px;
   border-radius: 3px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
-  transition: width 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ============================================================

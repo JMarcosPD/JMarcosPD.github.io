@@ -38,11 +38,17 @@
     const observer = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) {
         document.querySelectorAll(".skills .progress-bar").forEach(function (bar) {
-          bar.style.width = bar.getAttribute("aria-valuenow") + "%";
+          const target = bar.getAttribute("aria-valuenow") + "%";
+          bar.style.width = "0%";
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              bar.style.width = target;
+            });
+          });
         });
         observer.unobserve(skillsSection);
       }
-    }, { threshold: 0.25 });
+    }, { threshold: 0.15 });
     observer.observe(skillsSection);
   }
 
