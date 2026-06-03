@@ -833,6 +833,260 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 /* ============================================================
+   CURRÍCULO / RESUME ACCORDION
+   ============================================================ */
+
+/* Accordion container */
+.cv-accordion .accordion-item {
+  border: 1px solid var(--color-line);
+  border-radius: 10px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.cv-accordion .accordion-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.cv-accordion .accordion-button {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  background: var(--color-white);
+  padding: 18px 22px;
+  box-shadow: none !important;
+  gap: 12px;
+  border-radius: 10px !important;
+}
+
+.cv-accordion .accordion-button:not(.collapsed) {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+/* Orange chevron */
+.cv-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23848484'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.cv-accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e87532'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.cv-acc-icon {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.cv-accordion .accordion-body {
+  padding: 24px 26px 28px;
+  background: var(--color-body);
+  border-top: 1px solid var(--color-line);
+}
+
+/* ---- Timeline ---- */
+.cv-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.cv-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-line);
+  border-radius: 2px;
+}
+
+.cv-timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.cv-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 3px solid var(--color-body);
+  box-shadow: 0 0 0 2px var(--color-accent);
+  z-index: 1;
+}
+
+.cv-timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cv-timeline-header h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cv-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  background: var(--color-line);
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+
+.cv-badge-active {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+}
+
+.cv-org {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+
+.cv-list {
+  padding-left: 18px;
+  margin: 0;
+  list-style: disc;
+}
+
+.cv-list li {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  margin-bottom: 4px;
+}
+
+/* ---- Courses ---- */
+.cv-courses {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cv-course-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  transition: var(--transition);
+}
+
+.cv-course-item:hover {
+  border-color: rgba(232, 117, 50, 0.35);
+  box-shadow: var(--shadow-sm);
+}
+
+.cv-course-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.cv-course-item h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 2px;
+}
+
+.cv-course-item span {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+/* ---- Skills grid ---- */
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cv-skill-group h5 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-dark);
+  margin-bottom: 10px;
+}
+
+.cv-skill-group h5 i {
+  color: var(--color-accent);
+  font-size: 0.95rem;
+}
+
+.cv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cv-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  transition: var(--transition);
+}
+
+.cv-tag:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.cv-tag-highlight {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+/* ============================================================
    RESPONSIVE — tablet & mobile
    ============================================================ */
 @media (max-width: 1199.98px) {
@@ -897,5 +1151,13 @@ ul { padding: 0; margin: 0; list-style: none; }
 
   #main section {
     padding: 50px 0;
+  }
+
+  .cv-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-accordion .accordion-body {
+    padding: 18px 16px 22px;
   }
 }
