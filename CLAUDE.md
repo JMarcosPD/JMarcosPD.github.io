@@ -16,18 +16,21 @@ There are no dependencies to install, no linting tools, and no test suite.
 
 ## Architecture
 
-Single-page portfolio with five anchor sections (`#home`, `#sobre`, `#tecnologias`, `#projetos`, `#contato`) in one `index.html`.
+Single-page portfolio with sections `#hero`, `#sobre`, `#tecnologias`, `#projetos`, `#contato` in one `index.html`. Design inspired by BootstrapMade SnapFolio template.
 
 **CSS design system** — `css/styles.css` opens with CSS custom properties (`:root`) that define all colors and shadows. Any visual change should go through those variables first (`--color-accent`, `--color-bg`, `--color-dark`, etc.) rather than hardcoding values.
 
 **Responsive navbar** — The navbar is a vertical sidebar fixed to the left edge at ≥1200px (achieved purely with CSS; `body` gets `padding-left: 224px`). Below that breakpoint it collapses to a standard top hamburger menu. Styling for both states lives in `css/styles.css` inside the corresponding `@media` blocks.
 
-**JavaScript** (`js/main.js`) — vanilla, IIFE-wrapped, no dependencies beyond Bootstrap. It handles three things:
-1. Adds `is-scrolled` to the navbar after 12px of scroll (for the drop shadow).
-2. Scrollspy: walks sections on scroll and toggles `active` on the matching nav link.
-3. Hides the `<img class="profile-photo">` and reveals the `.profile-fallback` initials block when the image fails to load.
+**JavaScript** (`js/main.js`) — vanilla, IIFE-wrapped. Handles: AOS init, Typed.js, PureCounter, skill bar IntersectionObserver, portfolio filter, scrollspy, smooth scroll, mobile sidebar toggle, back-to-top, and profile image fallback.
 
-**Bootstrap** is vendored locally (`css/bootstrap.min.css` + `js/bootstrap.bundle.min.js`) so the site works offline and on GitHub Pages without a CDN.
+**Vendor libraries (CDN — require internet on first load):**
+- Bootstrap Icons 1.11.3
+- AOS 2.3.4 (scroll animations)
+- Typed.js 2.1.0 (hero typing effect)
+- PureCounter (animated counters in Sobre section)
+
+**Bootstrap** is vendored locally (`css/bootstrap.min.css` + `js/bootstrap.bundle.min.js`).
 
 ## Content to update before publishing
 

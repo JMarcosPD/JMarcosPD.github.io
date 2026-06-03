@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -9,352 +9,381 @@
   <meta name="author" content="João Marcos Poloni Demito">
   <title>João Marcos Poloni Demito | Portfólio</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar" aria-label="Navegação principal">
-    <div class="container">
-      <a class="navbar-brand" href="#home" aria-label="Voltar para a home">JM</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home" aria-label="Home">
-              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 10.6 12 3l9 7.6v9.1a1.3 1.3 0 0 1-1.3 1.3h-5.2v-6.4h-5V21H4.3A1.3 1.3 0 0 1 3 19.7v-9.1Z" />
-              </svg>
-              <span>Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre" aria-label="Sobre">
-              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 12.2a4.1 4.1 0 1 0 0-8.2 4.1 4.1 0 0 0 0 8.2Zm-7.4 8.3c.8-3.5 3.7-5.7 7.4-5.7s6.6 2.2 7.4 5.7H4.6Z" />
-              </svg>
-              <span>Sobre</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projetos" aria-label="Projetos">
-              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4.4 5.4h6.1l1.7 2H20a1.4 1.4 0 0 1 1.4 1.4v9.4a1.4 1.4 0 0 1-1.4 1.4H4.4A1.4 1.4 0 0 1 3 18.2V6.8a1.4 1.4 0 0 1 1.4-1.4Z" />
-              </svg>
-              <span>Projetos</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contato" aria-label="Contato">
-              <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4.8 6h14.4A1.8 1.8 0 0 1 21 7.8v8.4a1.8 1.8 0 0 1-1.8 1.8H4.8A1.8 1.8 0 0 1 3 16.2V7.8A1.8 1.8 0 0 1 4.8 6Zm7.2 6.5 7-5H5l7 5Zm0 2.2L5.1 9.8v6.3h13.8V9.8L12 14.7Z" />
-              </svg>
-              <span>Contato</span>
-            </a>
-          </li>
-        </ul>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" role="button" aria-label="Abrir menu"></i>
 
-        <div class="sidebar-social" aria-label="Redes sociais">
-          <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.3a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.3-2.3-.3-4.7-1.2-4.7-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.7 9.7 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.8-4.7 5 .4.3.7.9.7 1.8v2.6c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.3Z" />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/joao-marcos-poloni-demito/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.6 8.7H3.5v10.2h3.1V8.7ZM5.1 4a1.8 1.8 0 1 0 0 3.6A1.8 1.8 0 0 0 5.1 4Zm14.4 9.1c0-3-1.6-4.4-3.8-4.4a3.3 3.3 0 0 0-3 1.7V8.7h-3v10.2h3.1v-5.1c0-1.3.2-2.6 1.9-2.6s1.7 1.5 1.7 2.7v5h3.1v-5.8Z" />
-            </svg>
-          </a>
-          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Marcos!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3.1a8.8 8.8 0 0 0-7.5 13.4L3.4 21l4.6-1.1A8.8 8.8 0 1 0 12 3.1Zm0 2a6.8 6.8 0 1 1 0 13.6 6.7 6.7 0 0 1-3.5-1l-.4-.2-1.8.4.4-1.7-.3-.5A6.8 6.8 0 0 1 12 5.1Zm-3 3.8c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.4 3.9 2.2.9 2.6.6 3.1.6s1.5-.6 1.7-1.2c.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.4l-1.7-.8c-.2-.1-.4-.1-.6.2l-.7.9c-.1.2-.3.2-.6.1a5.7 5.7 0 0 1-2.9-2.5c-.2-.3 0-.4.1-.6l.5-.6c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4H9Z" />
-            </svg>
-          </a>
+  <!-- ======= Sidebar ======= -->
+  <header id="header">
+    <div class="d-flex flex-column h-100">
+
+      <div class="profile">
+        <img src="images/perfil.png" alt="João Marcos Poloni Demito" class="img-fluid rounded-circle">
+        <h1><a href="#hero">João Marcos</a></h1>
+        <p class="profile-title">Desenvolvedor em formação</p>
+        <div class="social-links">
+          <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/joao-marcos-poloni-demito/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Marcos!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door"></i><span>Home</span></a></li>
+          <li><a href="#sobre" class="nav-link scrollto"><i class="bi bi-person"></i><span>Sobre</span></a></li>
+          <li><a href="#tecnologias" class="nav-link scrollto"><i class="bi bi-file-earmark-code"></i><span>Tecnologias</span></a></li>
+          <li><a href="#projetos" class="nav-link scrollto"><i class="bi bi-briefcase"></i><span>Projetos</span></a></li>
+          <li><a href="#contato" class="nav-link scrollto"><i class="bi bi-envelope"></i><span>Contato</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  <!-- End Sidebar -->
+
+  <!-- ======= Hero ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>João Marcos Poloni Demito</h1>
+      <p>Sou <span class="typed" data-typed-items="Desenvolvedor Web,Programador Java,Estudante de TI,Entusiasta de Tecnologia"></span></p>
+      <div class="hero-btns">
+        <a href="#projetos" class="btn-hero scrollto">Ver Projetos</a>
+        <a href="#contato" class="btn-hero-outline scrollto">Entrar em Contato</a>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <main>
-    <section id="home" class="hero-section section-padding">
+  <main id="main">
+
+    <!-- ======= Sobre ======= -->
+    <section id="sobre" class="about">
       <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-7">
-            <p class="section-kicker">Portfólio de desenvolvedor</p>
-            <h1>João Marcos <span>Poloni Demito</span></h1>
-            <p class="hero-lead">
-              Entusiasta de tecnologia em formação, com foco em desenvolvimento web, Java, C e soluções que unem software, organização e gestão de projetos.
-            </p>
-            <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-primary btn-lg" href="#projetos">Ver projetos</a>
-              <a class="btn btn-outline-light btn-lg" href="#contato">Entrar em contato</a>
-            </div>
-            <div class="hero-highlights" aria-label="Resumo profissional">
-              <div>
-                <strong>Web</strong>
-                <span>interfaces responsivas</span>
-              </div>
-              <div>
-                <strong>Java & C</strong>
-                <span>fundamentos sólidos</span>
-              </div>
-              <div>
-                <strong>Projetos</strong>
-                <span>organização e entrega</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-5">
-            <div class="profile-frame mx-auto">
-              <img src="images/perfil.png" alt="Foto de perfil de João Marcos Poloni Demito" class="profile-photo" data-fallback-initials="JM">
-              <div class="profile-fallback" aria-hidden="true">JM</div>
-              <div class="profile-label">Desenvolvedor em formação</div>
-            </div>
-          </div>
+        <div class="section-title" data-aos="fade-up">
+          <h2>Sobre</h2>
+          <p>Entusiasta de tecnologia em formação, com foco em desenvolvimento web, Java, C e soluções que unem software, organização e gestão de projetos.</p>
         </div>
-      </div>
-    </section>
 
-    <section id="sobre" class="section-padding section-light">
-      <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-lg-5">
-            <div class="section-icon">
-              <img src="images/botaoPerfil.png" alt="" aria-hidden="true">
-            </div>
-            <p class="section-kicker">Sobre mim</p>
-            <h2>Desenvolvimento com visão técnica e prática.</h2>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="images/perfil.png" class="img-fluid about-photo" alt="João Marcos Poloni Demito">
           </div>
-          <div class="col-lg-7">
-            <p class="section-text">
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Desenvolvedor em formação &amp; Entusiasta de Tecnologia</h3>
+            <p>
               Sou João Marcos Poloni Demito, estudante e entusiasta de tecnologia. Tenho interesse em criar aplicações web responsivas, escrever código limpo e entender como boas decisões de projeto ajudam a transformar ideias em soluções utilizáveis.
             </p>
-            <p class="section-text">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong> <span>joaomarcospoloni</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Formação:</strong> <span>ADS</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Graduação:</strong> <span>Eng. de Produção – UEM</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>joao.marcos.poloni@email.com</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
               Minha formação combina Análise e Desenvolvimento de Sistemas com Engenharia de Produção com ênfase em Software na UEM, aproximando programação, pensamento analítico, processos e gestão.
             </p>
+          </div>
+        </div>
 
-            <div class="row g-3 mt-3">
-              <div class="col-md-6">
-                <div class="info-card">
-                  <span>Formação</span>
-                  <strong>Análise e Desenvolvimento de Sistemas</strong>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-card">
-                  <span>Graduação</span>
-                  <strong>Engenharia de Produção, ênfase em Software - UEM</strong>
-                </div>
-              </div>
+        <div class="row counters" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-briefcase"></i>
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projetos</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-file-earmark-code"></i>
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Tecnologias</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-mortarboard"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Cursos</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-clock-history"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Ano de estudo</p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section id="tecnologias" class="section-padding section-muted">
+    <!-- ======= Tecnologias ======= -->
+    <section id="tecnologias" class="skills section-bg">
       <div class="container">
-        <div class="row align-items-end mb-4">
-          <div class="col-lg-7">
-            <p class="section-kicker">Tecnologias</p>
-            <h2>Áreas e ferramentas que fazem parte da minha jornada.</h2>
-          </div>
-          <div class="col-lg-5">
-            <p class="section-text mb-0">
-              Busco evoluir combinando fundamentos de programação, desenvolvimento web e práticas de organização de projetos.
-            </p>
-          </div>
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Tecnologias</h2>
+          <p>Áreas e ferramentas que fazem parte da minha jornada de aprendizado.</p>
         </div>
 
-        <div class="row g-3">
-          <div class="col-sm-6 col-lg-4">
-            <article class="skill-card">
-              <div class="skill-card-icons">
-                <img src="images/HTML.png" alt="HTML5">
-                <img src="images/css.png" alt="CSS">
-                <img src="images/JS.png" alt="JavaScript">
-              </div>
-              <span>01</span>
-              <h3>Desenvolvimento Web</h3>
-              <p>HTML, CSS, JavaScript, Bootstrap e construção de interfaces responsivas.</p>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <article class="skill-card">
-              <div class="skill-card-icons">
-                <img src="images/java.png" alt="Java">
-              </div>
-              <span>02</span>
-              <h3>Java</h3>
-              <p>Programação orientada a objetos, lógica de sistemas e estruturação de código.</p>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <article class="skill-card">
-              <div class="skill-card-icons">
-                <img src="images/C.png" alt="C">
-                <img src="images/c++.png" alt="C++">
-              </div>
-              <span>03</span>
-              <h3>C</h3>
-              <p>Fundamentos de programação, algoritmos, estruturas e resolução de problemas.</p>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <article class="skill-card">
-              <div class="skill-card-icons">
-                <img src="images/excel.png" alt="Excel">
-              </div>
-              <span>04</span>
-              <h3>Tecnologia</h3>
-              <p>Curiosidade por novas ferramentas, boas práticas e evolução constante.</p>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <article class="skill-card">
-              <div class="skill-card-icons">
-                <img src="images/excel.png" alt="Excel">
-              </div>
-              <span>05</span>
-              <h3>Gestão de Projetos</h3>
-              <p>Organização, planejamento, acompanhamento de entregas e visão de processo.</p>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <article class="skill-card">
-              <span>06</span>
-              <h3>GitHub Pages</h3>
-              <p>Publicação de sites estáticos com estrutura simples e fácil manutenção.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="row skills-content">
+          <div class="col-lg-6" data-aos="fade-up">
 
-    <section id="projetos" class="section-padding section-light">
-      <div class="container">
-        <div class="row align-items-end mb-4">
-          <div class="col-lg-8">
-            <div class="section-icon">
-              <img src="images/Projetos.png" alt="" aria-hidden="true">
+            <div class="progress">
+              <span class="skill">
+                <img src="images/HTML.png" alt="" class="skill-icon" aria-hidden="true">
+                HTML
+                <i class="val">90%</i>
+              </span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-            <p class="section-kicker">Portfólio</p>
-            <h2>Projetos selecionados</h2>
+
+            <div class="progress">
+              <span class="skill">
+                <img src="images/css.png" alt="" class="skill-icon" aria-hidden="true">
+                CSS / Bootstrap
+                <i class="val">80%</i>
+              </span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">
+                <img src="images/JS.png" alt="" class="skill-icon" aria-hidden="true">
+                JavaScript
+                <i class="val">65%</i>
+              </span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
           </div>
-          <div class="col-lg-4">
-            <p class="section-text mb-0">
-              Cards preparados para projetos acadêmicos e pessoais, com links externos abrindo em nova aba.
-            </p>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">
+                <img src="images/java.png" alt="" class="skill-icon" aria-hidden="true">
+                Java
+                <i class="val">70%</i>
+              </span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">
+                <img src="images/C.png" alt="" class="skill-icon" aria-hidden="true">
+                <img src="images/c++.png" alt="" class="skill-icon" aria-hidden="true">
+                C / C++
+                <i class="val">60%</i>
+              </span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">
+                <img src="images/excel.png" alt="" class="skill-icon" aria-hidden="true">
+                Excel / Gestão de Projetos
+                <i class="val">75%</i>
+              </span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-3">
-            <article class="project-card">
-              <div>
-                <span class="project-tag">Web</span>
-                <h3>Portfólio Pessoal</h3>
+      </div>
+    </section>
+
+    <!-- ======= Projetos ======= -->
+    <section id="projetos" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Projetos</h2>
+          <p>Projetos selecionados que demonstram minha jornada de aprendizado e desenvolvimento.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Todos</li>
+              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-java">Java</li>
+              <li data-filter=".filter-c">C</li>
+              <li data-filter=".filter-gestao">Gestão</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <div class="portfolio-header ph-web"><i class="bi bi-globe2"></i></div>
+              <div class="portfolio-info">
+                <span class="portfolio-tag">Web</span>
+                <h4>Portfólio Pessoal</h4>
                 <p>Site estático responsivo criado com HTML, CSS, JavaScript e Bootstrap para apresentar perfil, tecnologias, projetos e contatos.</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver</a>
+                </div>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-sm btn-primary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </article>
+            </div>
           </div>
 
-          <div class="col-md-6 col-xl-3">
-            <article class="project-card">
-              <div>
-                <span class="project-tag">Java</span>
-                <h3>Sistema Acadêmico</h3>
+          <div class="portfolio-item filter-java">
+            <div class="portfolio-wrap">
+              <div class="portfolio-header ph-java"><i class="bi bi-cup-hot"></i></div>
+              <div class="portfolio-info">
+                <span class="portfolio-tag">Java</span>
+                <h4>Sistema Acadêmico</h4>
                 <p>Projeto em Java voltado à prática de orientação a objetos, regras de negócio e organização de classes.</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver</a>
+                </div>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-sm btn-primary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </article>
+            </div>
           </div>
 
-          <div class="col-md-6 col-xl-3">
-            <article class="project-card">
-              <div>
-                <span class="project-tag">C</span>
-                <h3>Algoritmos em C</h3>
+          <div class="portfolio-item filter-c">
+            <div class="portfolio-wrap">
+              <div class="portfolio-header ph-c"><i class="bi bi-code-slash"></i></div>
+              <div class="portfolio-info">
+                <span class="portfolio-tag">C</span>
+                <h4>Algoritmos em C</h4>
                 <p>Repositório de estudos com lógica de programação, estruturas básicas, funções e exercícios práticos.</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver</a>
+                </div>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-sm btn-primary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </article>
+            </div>
           </div>
 
-          <div class="col-md-6 col-xl-3">
-            <article class="project-card">
-              <div>
-                <span class="project-tag">Gestão</span>
-                <h3>Planejamento de Projeto</h3>
+          <div class="portfolio-item filter-gestao">
+            <div class="portfolio-wrap">
+              <div class="portfolio-header ph-gestao"><i class="bi bi-kanban"></i></div>
+              <div class="portfolio-info">
+                <span class="portfolio-tag">Gestão</span>
+                <h4>Planejamento de Projeto</h4>
                 <p>Estudo aplicado de organização de tarefas, documentação, fluxo de entregas e acompanhamento de evolução.</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+                  <a href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver</a>
+                </div>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-sm btn-primary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                <a class="btn btn-sm btn-outline-secondary" href="https://github.com/joaomarcospoloni" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </article>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section id="contato" class="section-padding contact-section">
+    <!-- ======= Contato ======= -->
+    <section id="contato" class="contact section-bg">
       <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
-            <div class="section-icon">
-              <img src="images/Contato.png" alt="" aria-hidden="true">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contato</h2>
+          <p>Entre em contato pelos canais abaixo. Os links abrem e-mail, LinkedIn e WhatsApp diretamente.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-4">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:joao.marcos.poloni@email.com">joao.marcos.poloni@email.com</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-linkedin"></i>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <p><a href="https://www.linkedin.com/in/joao-marcos-poloni-demito/" target="_blank" rel="noopener noreferrer">joao-marcos-poloni-demito</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-whatsapp"></i>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <p><a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Marcos!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer">Enviar mensagem</a></p>
+                </div>
+              </div>
             </div>
-            <p class="section-kicker">Contato</p>
-            <h2>Vamos conversar sobre tecnologia, projetos e oportunidades.</h2>
-            <p class="section-text">
-              Entre em contato pelos canais abaixo. Os links foram configurados para abrir e-mail, LinkedIn e WhatsApp diretamente.
-            </p>
           </div>
 
-          <div class="col-lg-6">
-            <div class="contact-card">
-              <a href="mailto:joao.marcos.poloni@email.com" class="contact-link">
-                <span>E-mail</span>
-                <strong>joao.marcos.poloni@email.com</strong>
-              </a>
-              <a href="https://www.linkedin.com/in/joao-marcos-poloni-demito/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                <span>LinkedIn</span>
-                <strong>linkedin.com/in/joao-marcos-poloni-demito</strong>
-              </a>
-              <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Marcos!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="contact-link">
-                <span>WhatsApp</span>
-                <strong>Enviar mensagem</strong>
-              </a>
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
+            <div class="contact-about">
+              <h3>Vamos conversar sobre tecnologia, projetos e oportunidades.</h3>
+              <p>Estou aberto a oportunidades de estágio, colaborações em projetos e conexões na área de tecnologia. Respondo via email, LinkedIn e WhatsApp.</p>
+              <div class="contact-cta">
+                <a href="mailto:joao.marcos.poloni@email.com" class="btn-contact-primary">
+                  <i class="bi bi-envelope"></i> Enviar Email
+                </a>
+                <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Marcos!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="btn-contact-whatsapp">
+                  <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-      <span>© 2026 João Marcos Poloni Demito.</span>
-      <a href="#home">Voltar ao topo</a>
+  <footer id="footer">
+    <div class="container text-center">
+      <span>&copy; 2026 <strong>João Marcos Poloni Demito</strong>. Todos os direitos reservados.</span>
     </div>
   </footer>
 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
   <script src="js/main.js"></script>
 </body>
 
