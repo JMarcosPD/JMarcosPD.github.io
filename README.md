@@ -9,7 +9,7 @@ Site estático de portfólio desenvolvido com HTML, CSS, JavaScript e Bootstrap,
 - `css/styles.css`: estilos personalizados do portfólio.
 - `js/bootstrap.bundle.min.js`: JavaScript local do Bootstrap.
 - `js/main.js`: interações do menu, scrollspy e fallback da imagem de perfil.
-- `images/fotoperfil.png`: foto de perfil esperada pelo site.
+- `images/perfil.png`: foto de perfil exibida no site.
 
 ## Observações
 
