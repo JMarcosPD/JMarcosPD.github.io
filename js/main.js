@@ -72,27 +72,38 @@
   /* --------------------------------------------------
      Scrollspy
   -------------------------------------------------- */
+  function setActive(link) {
+    document.querySelectorAll(".nav-menu .nav-link").forEach(function (l) { l.classList.remove("active"); });
+    if (link) link.classList.add("active");
+  }
+
   function scrollspy() {
-    const y = window.scrollY;
+    const y       = window.scrollY;
     const heroLink = document.querySelector(".nav-menu a[href='#hero']");
 
     if (y < 80) {
-      document.querySelectorAll(".nav-menu .nav-link").forEach(function (l) { l.classList.remove("active"); });
-      if (heroLink) heroLink.classList.add("active");
+      setActive(heroLink);
       return;
+    }
+
+    // When near the bottom of the page, always activate the last section
+    const atBottom = y + window.innerHeight >= document.documentElement.scrollHeight - 60;
+    if (atBottom) {
+      const sections = document.querySelectorAll("#main section[id]");
+      const lastSection = sections[sections.length - 1];
+      if (lastSection) {
+        const lastLink = document.querySelector(".nav-menu a[href='#" + lastSection.id + "']");
+        setActive(lastLink);
+        return;
+      }
     }
 
     document.querySelectorAll("#main section[id]").forEach(function (section) {
       const top    = section.offsetTop - 100;
       const bottom = top + section.offsetHeight;
-      const id     = section.getAttribute("id");
-      const link   = document.querySelector(".nav-menu a[href='#" + id + "']");
+      const link   = document.querySelector(".nav-menu a[href='#" + section.id + "']");
       if (!link) return;
-
-      if (y >= top && y < bottom) {
-        document.querySelectorAll(".nav-menu .nav-link").forEach(function (l) { l.classList.remove("active"); });
-        link.classList.add("active");
-      }
+      if (y >= top && y < bottom) setActive(link);
     });
   }
 
@@ -109,6 +120,10 @@
       const target = document.querySelector(hash);
       if (!target) return;
       e.preventDefault();
+
+      // Activate nav link immediately on click
+      const navLink = document.querySelector(".nav-menu a[href='" + hash + "']");
+      if (navLink) setActive(navLink);
 
       const top = hash === "#hero" ? 0 : target.offsetTop - 20;
       window.scrollTo({ top: top, behavior: "smooth" });
