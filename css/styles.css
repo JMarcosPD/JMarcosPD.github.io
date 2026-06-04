@@ -596,6 +596,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .ph-java  { background: linear-gradient(135deg, #4d8fc4, #2c5f8a); }
 .ph-c     { background: linear-gradient(135deg, #5c7cb6, #3a5a9b); }
 .ph-gestao { background: linear-gradient(135deg, #2eaf73, #1e7f52); }
+.ph-tcc    { background: linear-gradient(135deg, #9b59b6, #6c3483); }
 
 .portfolio-info {
   padding: 18px 20px 20px;
