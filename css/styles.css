@@ -1212,3 +1212,4 @@ ul { padding: 0; margin: 0; list-style: none; }
 .ph-blood { background: linear-gradient(135deg, #d64545, #9b2c2c); }
 .portfolio-note { font-size: 0.85rem; color: #6b7280; display: inline-flex; align-items: center; gap: 6px; }
 .hero-btns .btn-hero-outline i { margin-right: 4px; }
+.ph-zentry { background: linear-gradient(135deg, #3b82c4, #1e4f86); }
