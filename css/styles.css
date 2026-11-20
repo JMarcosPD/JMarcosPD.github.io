@@ -1202,3 +1202,13 @@ ul { padding: 0; margin: 0; list-style: none; }
     padding: 18px 16px 22px;
   }
 }
+
+/* ===== Atualização nov/2026 ===== */
+.skill-card { gap: 8px; text-align: center; }
+.skill-card-name { margin-top: 6px; }
+.skill-card-use { font-size: 0.8rem; color: #6b7280; }
+.skill-card-icon .ia-icon { font-size: 46px; color: var(--color-accent); }
+.ph-ia    { background: linear-gradient(135deg, #2eaf73, #1e7f52); }
+.ph-blood { background: linear-gradient(135deg, #d64545, #9b2c2c); }
+.portfolio-note { font-size: 0.85rem; color: #6b7280; display: inline-flex; align-items: center; gap: 6px; }
+.hero-btns .btn-hero-outline i { margin-right: 4px; }

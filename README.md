@@ -4,7 +4,7 @@ Site estático de portfólio desenvolvido com HTML, CSS, JavaScript e Bootstrap,
 
 ## Estrutura
 
-- `index.html`: página principal com Home, Sobre Mim, Tecnologias, Projetos e Contato.
+- `index.html`: página principal com Home, Sobre, Currículo, Tecnologias, Projetos e Contato.
 - `css/bootstrap.min.css`: Bootstrap local.
 - `css/styles.css`: estilos personalizados do portfólio.
 - `js/bootstrap.bundle.min.js`: JavaScript local do Bootstrap.
@@ -15,4 +15,4 @@ Site estático de portfólio desenvolvido com HTML, CSS, JavaScript e Bootstrap,
 
 O template original tinha páginas extras, formulário PHP e referências a recursos premium. Essas dependências foram removidas para manter o projeto estático e gratuito.
 
-Como e-mail, WhatsApp, LinkedIn e links reais dos repositórios não foram informados, o HTML usa valores provisórios. Atualize os links em `index.html` antes da publicação final.
+O currículo em PDF fica em `Documentos/`, e o botão "Baixar Currículo" da página inicial aponta para ele.
